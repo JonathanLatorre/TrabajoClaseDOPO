@@ -9,7 +9,7 @@ public class Portaaviones {
      * "Los tripulantes mínimos que necesitan y los puntajes que otorgan las diferentes elementos de guerra: portaavión, barco y avión.
      * Los puntajes se pueden cambiar durante el juego pero los tripulantes necesarios no."
      */
-    public final int tripulantes_minimos = 5;
+    public final int tripulantesMinimos = 5;
     private int puntaje;
 
     private int numero;
