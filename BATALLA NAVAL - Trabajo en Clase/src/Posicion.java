@@ -1,5 +1,5 @@
 /**
- * Representa una ubicación dentro del tablero.
+ * Representa una ubicación dentro del tablero..
  */
 public class Posicion {
 

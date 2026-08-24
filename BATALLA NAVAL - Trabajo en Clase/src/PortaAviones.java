@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 /**
- * Representa un portaaviones perteneciente a una flota
+ * Representa un portaaviones perteneciente a una flota.
  */
-public class Portaaviones {
+public class PortaAviones {
 
     /**
      * "Los tripulantes mínimos que necesitan y los puntajes que otorgan las diferentes elementos de guerra: portaavión, barco y avión.

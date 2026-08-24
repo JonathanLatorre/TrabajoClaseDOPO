@@ -1,5 +1,5 @@
 /**
- * Representa los marinos perteneciente a la flota
+ * Representa los marinos perteneciente a la flota.
  */
 public class Marino {
 

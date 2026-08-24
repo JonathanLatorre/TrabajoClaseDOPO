@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Clase que representa el mundo de juego.
+ * Clase que representa el mundo de juego
  */
 public class Tablero {
 

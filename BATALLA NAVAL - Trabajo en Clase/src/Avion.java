@@ -1,5 +1,5 @@
 /**
- * Representa un avión de combate perteneciente a una flota.
+ * Representa un avión de combate perteneciente a una flota..
  */
 public class Avion {
 
@@ -17,4 +17,13 @@ public class Avion {
     private Marino piloto;
     private Marino copiloto;
 
+
+
+
+    public boolean estaEnAire(){
+        return enAire;
+    }
+    public String getPlaca(){
+        return placa;
+    }
 }

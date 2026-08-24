@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Representa un barco perteneciente a una flota
+ * Representa un barco perteneciente a una flota.
  */
 public class Barco {
 
