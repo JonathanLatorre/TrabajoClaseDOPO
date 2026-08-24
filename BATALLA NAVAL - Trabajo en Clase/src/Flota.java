@@ -19,4 +19,54 @@ public class Flota {
     private ArrayList<Barco> barcos;
     private ArrayList<Marino> marinos;
 
+    /*
+        Verficar si el ataque que se va a hacer es el adecuado
+        o en otras palabras es que si el ataque destruye al enemigo
+
+        *@param longitud de la explosion
+        *@param latitid de la explosion
+        *@return true si el ataque destruye al enemigo sin bajas propias
+     */
+    public boolean esBuenAtaque(int longitud, int latitud) {
+        boolean afectaPropio = false;
+        boolean afectaEnemigo = false;
+        for (Flota flota : tablero.getFlotas()) {
+            boolean esPropia = flota.getCodigo().equals(this.codigo);
+            // Revisar barcos
+            for (Barco barco : flota.getBarcos()) {
+                if (coincideUbicacion(barco.getUbicacion(), longitud, latitud)) {
+                    if (esPropia) {
+                        afectaPropio = true;
+                    } else {
+                        afectaEnemigo = true;
+                    }
+                }
+            }
+            // Revisar portaaviones
+            for (Portaaviones porta : flota.getPortaAviones()) {
+                if (coincideUbicacion(porta.getUbicacion(), longitud, latitud)) {
+                    if (esPropia) {
+                        afectaPropio = true;
+                    } else {
+                        afectaEnemigo = true;
+                    }
+                }
+            }
+            // Revisar aviones
+            for (Avion avion : flota.getAviones()) {
+                if (!avion.isEnAire() && coincideUbicacion(avion.getUbicacion(), longitud, latitud)) {
+                    if (esPropia) {
+                        afectaPropio = true;
+                    } else {
+                        afectaEnemigo = true;
+                    }
+                }
+            }
+        }
+        // Es buen ataque si destruye algo enemigo y nada propio
+        return afectaEnemigo && !afectaPropio;
+    }
 }
+
+
+
